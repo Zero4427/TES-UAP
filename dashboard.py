@@ -446,7 +446,7 @@ elif mode == "Prediksi Multi-Polutan":
             st.markdown("<div class='custom-container'>", unsafe_allow_html=True)
             st.markdown("### 📈 Hasil Prediksi Multi-Polutan")
             
-            col1, col2, col3, col4 = st.columns(4)
+            col1, col2, col3, col4, col5 = st.columns(5)
             with col1:
                 st.metric("CO", f"{co_pred:.2f} mg/m³")
             with col2:
@@ -455,7 +455,9 @@ elif mode == "Prediksi Multi-Polutan":
                 st.metric("C6H6", f"{c6h6_pred:.2f} µg/m³")
             with col4:
                 st.metric("AQI", f"{aqi:.0f}")
-            
+            with col5:
+                st.markdown(f"<h3 style='text-align: center; color: {color};'>{category}</h3>", unsafe_allow_html=True)
+
             st.markdown("</div>", unsafe_allow_html=True)
             
             # Visualisasi Radar Chart
