@@ -96,6 +96,42 @@ st.markdown("""
         border-radius: 10px;
         color: #f0ebd8;
     }
+            
+    /* Selected value */
+    [data-baseweb="select"] > div {
+        color: #f0ebd8 !important;
+    }
+
+    /* Dropdown menu container */
+    [data-baseweb="popover"] {
+        background-color: #1d2d44 !important;
+        border: 1px solid #748cab !important;
+    }
+
+    /* Dropdown options */
+    [data-baseweb="menu"] {
+        background-color: #1d2d44 !important;
+    }
+
+    /* Text option */
+    [data-baseweb="option"] {
+        color: #f0ebd8 !important;
+        background-color: #1d2d44 !important;
+        font-weight: 500;
+    }
+
+    /* Hover option */
+    [data-baseweb="option"]:hover {
+        background-color: #3e5c76 !important;
+        color: #ffffff !important;
+    }
+
+    /* Selected option */
+    [data-baseweb="option"][aria-selected="true"] {
+        background-color: #748cab !important;
+        color: #1d2d44 !important;
+        font-weight: 700;
+    }
     
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
@@ -124,8 +160,10 @@ st.markdown("""
         color: #f0ebd8 !important;
     }
     
-    /* Text Color */
-    p, label, span, div {
+    /* Text default app (AMAN) */
+    .stApp p,
+    .stApp label,
+    .stApp span {
         color: #f0ebd8;
     }
     
